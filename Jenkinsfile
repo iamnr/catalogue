@@ -14,8 +14,16 @@ pipeline {
         stage ('unit test'){
             
             steps {
-                echo 'unit teesting is done here'
+                echo 'unit testing is done here'
             }
+        }
+    }
+
+    post {
+
+        always {
+
+            directoryDel()
         }
     }
 }
