@@ -17,7 +17,25 @@ pipeline {
                 echo 'unit testing is done here'
             }
         }
+
+
+        stage ('zipping files'){
+
+            steps {
+
+                sh 'zip -r catalogue.zip ./* --exclude=.git --exclude=.zip'
+            }
+        }
     }
 
-   
+    post {
+
+        always {
+
+            cleanWs(
+                deleteDirs:true
+            )
+
+        }
+    }
 }
