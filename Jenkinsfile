@@ -23,7 +23,7 @@ pipeline {
 
         always {
 
-            directoryDel()
+            deleteDel()
         }
     }
 }
