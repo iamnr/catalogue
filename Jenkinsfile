@@ -23,8 +23,10 @@ pipeline {
 
         always {
 
-            echo 'cleaning up directory'
-            deleteDir()
+            cleanWs(
+                deleteDirs:true
+            )
+
         }
     }
 }
