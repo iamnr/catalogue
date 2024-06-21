@@ -28,14 +28,14 @@ pipeline {
         }
     }
 
-    post {
+    // post {
 
-        always {
+    //     always {
 
-            cleanWs(
-                deleteDirs:true
-            )
+    //         cleanWs(
+    //             deleteDirs:true
+    //         )
 
-        }
-    }
+    //     }
+    // }
 }
