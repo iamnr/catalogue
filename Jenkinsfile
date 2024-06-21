@@ -23,6 +23,7 @@ pipeline {
 
         always {
 
+            echo 'cleaning up directory'
             deleteDir()
         }
     }
