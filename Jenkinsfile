@@ -7,7 +7,7 @@ pipeline {
         stage ('Installing Dependencies'){
 
             steps {
-                sh 'Dependencies installed'
+                echo 'Dependencies installed'
             }
         }
 
