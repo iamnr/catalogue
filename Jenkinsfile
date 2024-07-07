@@ -28,7 +28,8 @@ pipeline {
 
     post {
 
-        always('deleting files') {
+        always {
+            echo 'deleting files'
             deleteDir()
         }
     }
