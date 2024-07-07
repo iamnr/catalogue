@@ -28,7 +28,7 @@ pipeline {
 
     post {
 
-        always {
+        always('deleting files') {
             deleteDir()
         }
     }
