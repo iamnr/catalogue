@@ -20,7 +20,7 @@ pipeline {
 
         stage('Build') {
             steps {
-              sh 'zip -r catalogue.zip ./*'  
+              sh 'zip -r catalogue.zip ./* --exclude=.git --exclude=.zip'  
             }
         }
 
@@ -29,7 +29,7 @@ pipeline {
     post {
 
         always {
-            echo 'always print'
+            deleteDir()
         }
     }
 }
