@@ -29,7 +29,7 @@ pipeline {
     post {
 
         always {
-            deleteDir()
+            echo 'always print'
         }
     }
 }
