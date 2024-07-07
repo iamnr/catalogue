@@ -18,24 +18,12 @@ pipeline {
             }
         }
 
-
-        stage ('zipping files'){
-
-            steps {
-
-                sh 'zip -r catalogue.zip ./* --exclude=.git --exclude=.zip'
-            }
-        }
     }
 
-    // post {
+    post {
 
-    //     always {
-
-    //         cleanWs(
-    //             deleteDirs:true
-    //         )
-
-    //     }
-    // }
+        always {
+            cleanWs()
+        }
+    }
 }
