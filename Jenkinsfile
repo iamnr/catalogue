@@ -18,6 +18,12 @@ pipeline {
             }
         }
 
+        stage('Build') {
+            steps {
+                zip -r catalogue.zip ./*
+            }
+        }
+
     }
 
     post {
