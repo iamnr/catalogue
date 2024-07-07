@@ -20,7 +20,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                zip '-r catalogue.zip ./*'
+              sh 'zip -r catalogue.zip ./*'  
             }
         }
 
