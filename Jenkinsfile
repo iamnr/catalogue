@@ -29,7 +29,6 @@ pipeline {
             
             steps {
                 echo 'unit testing is done here'
-                echo "${packageVersion}"
             }
         }
 
