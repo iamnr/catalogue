@@ -4,7 +4,7 @@ pipeline {
 
     stages {
 
-        stage {
+        stage ('version') {
             steps {
                 def packageJson = readJSON file: 'package.json'
                 def packageVersion = packageJson.version
