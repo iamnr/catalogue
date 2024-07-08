@@ -62,7 +62,11 @@ pipeline {
         stage('calling downstream job') {
             steps {
                 script {
-                    build job: "../catalogue-deploy" , wait: true
+
+                    def params = [
+                        string(name: 'version' , value: "$packageVersion")
+                    ]
+                    build job: "../catalogue-deploy" , wait: true , parameters: params
                 }
             }
         }
