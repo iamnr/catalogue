@@ -61,7 +61,9 @@ pipeline {
 
         stage('calling downstream job') {
             steps {
-                build-job: "../catalogue-deploy" , wait: true
+                script {
+                    build-job: "../catalogue-deploy" , wait: true
+                }
             }
         }
 
