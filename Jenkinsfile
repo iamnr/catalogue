@@ -8,11 +8,11 @@ pipeline {
 
     stages {
 
-        stage ('version') {
+        stage ('get version') {
             steps {
                 script{
                     def packageJson = readJSON(file: 'package.json')
-                    def packageVersion = packageJson.version
+                    packageVersion = packageJson.version
                     echo "${packageVersion}"
                 }
             }
