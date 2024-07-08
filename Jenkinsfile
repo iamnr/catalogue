@@ -34,7 +34,8 @@ pipeline {
 
         stage('Build') {
             steps {
-              sh 'zip -r catalogue.zip ./* --exclude=.git --exclude=.zip'  
+              sh 'zip -r catalogue.zip ./* --exclude=.git --exclude=.zip' 
+              echo "${packageVersion}" 
             }
         }
 
