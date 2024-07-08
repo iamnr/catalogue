@@ -4,6 +4,14 @@ pipeline {
 
     stages {
 
+        stage {
+            steps {
+                def packageJson = readJSON file: 'package.json'
+                def packageVersion = packageJson.version
+                echo "${packageJson.version}"
+            }
+        }
+
         stage ('Installing Dependencies'){
 
             steps {
